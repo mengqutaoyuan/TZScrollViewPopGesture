@@ -160,4 +160,15 @@
     objc_setAssociatedObject(self, @selector(tz_interactivePopDisabled), @(disabled), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+- (void)canUseBackGesture:(BOOL) used {
+    
+    if (self.navigationController.childViewControllers.count > 0) {
+        if (self == self.navigationController.childViewControllers[0] || !used ) {
+            self.navigationController.interactivePopGestureRecognizer.delegate = self.navigationController.tz_popDelegate; // 不支持侧滑
+        } else {
+            self.navigationController.interactivePopGestureRecognizer.delegate = nil; // 支持侧滑
+        }
+    }
+}
+
 @end

@@ -10,6 +10,8 @@
 
 @interface UINavigationController (TZPopGesture)<UIGestureRecognizerDelegate,UINavigationControllerDelegate>
 
+- (id)tz_popDelegate;
+
 @end
 
 
@@ -18,6 +20,7 @@
 /// 给view添加侧滑返回效果
 - (void)tz_addPopGestureToView:(UIView *)view;
 
+- (void)canUseBackGesture:(BOOL) used;
 /// 禁止该页面的侧滑返回
 @property (nonatomic, assign) BOOL tz_interactivePopDisabled;
 
