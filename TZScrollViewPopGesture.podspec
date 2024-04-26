@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/mengqutaoyuan/TZScrollViewPopGesture.git", :branch => "master" }
   s.requires_arc = true
   s.source_files = "TZScrollViewPopGesture/TZScrollViewPopGesture/*.{h,m}"
-  s.resource_bundles = {'TZScrollViewPopGesture' => ['AFNetworking/TZScrollViewPopGesture/TZScrollViewPopGesture/PrivacyInfo.xcprivacy']}
+  s.resource_bundles = {'TZScrollViewPopGesture' => ['TZScrollViewPopGesture/TZScrollViewPopGesture/PrivacyInfo.xcprivacy']}
 
 end
